@@ -1,32 +1,122 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Usage example for cidr-converter</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="J.M. (me@mynetx.net)" />
-</head>
-
-<body>
-    <p>Please see your browser’s console for the output of the script.
-        Check the source code of this page to see how cidr-converter is used.
-    </p>
-
-    <script src="cidr.js"></script>
-    <script type="text/javascript">
-        console.info("Setting the CIDR value.");
-        var cidr = new Cidr;
-        cidr.setCidr("209.85.148.138/17");
-        console.log("The CIDR is " + cidr.getCidr());
-        console.log("The subnet mask is " + cidr.getSubnetmask());
-        console.log("The IP range is " + cidr.getIpFrom() + " to " + cidr.getIpTo());
-
-        console.info("Setting the IP and subnet.");
-        cidr = new Cidr;
-        cidr.setIp("209.85.148.138");
-        cidr.setSubnetmask("255.255.128.0");
-        console.log("The CIDR is " + cidr.getCidr());
-        console.log("The subnet mask is " + cidr.getSubnetmask());
-        console.log("The IP range is " + cidr.getIpFrom() + " to " + cidr.getIpTo());
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Convert IP subnets to CIDR notation, and back · cidr-converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pack and unpack IP addresses and their subnets to the corresponding CIDR notation, and vice-versa.">
+    <meta name="author" content="J.M. (me@mynetx.net)">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    <style>
+      div.copy-container {
+        position: relative;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">
+            cidr-converter
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-unit">
+        <div>
+          <p>
+            With CIDR, you can write compact IP addresses along with their subnet
+            masks. Using this converter, you can pack and unpack IP addresses and their
+            subnets to the corresponding CIDR notation, and vice-versa. We currently
+            support IPv4 only, but support for IPv6 is in the works.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="http://en.wikipedia.org/wiki/CIDR_notation">
+          Learn more about CIDR »
+        </a>
+      </div>
+      <form>
+        <div class="well">
+          <div>
+            <p>
+              Start with typing an IP address and subnet, or paste a CIDR notation on the right.
+              The other fields will populate automatically.
+            </p>
+          </div>
+          <div class="row">
+            <div class="span3">
+              <label for="ip">
+                IP address
+              </label>
+              <input tabindex="1" id="ip" type="text" placeholder="127.0.0.1" autofocus autocomplete="off">
+              <div id="ip-copy-container" class="copy-container">
+                <button class="btn btn-mini" id="ip-copy"><i class="icon-ok"></i> copy</button>
+              </div>
+            </div>
+            <div class="span3">
+              <label for="subnet">
+                Subnet mask
+              </label>
+              <input tabindex="2" id="subnet" type="text" placeholder="255.0.0.0" autocomplete="off">
+              <div id="subnet-copy-container" class="copy-container">
+                <button class="btn btn-mini" id="subnet-copy"><i class="icon-ok"></i> copy</button>
+              </div>
+            </div>
+            <div class="span3">
+              <label for="cidr">
+                CIDR notation
+              </label>
+              <input tabindex="3" id="cidr" type="text" placeholder="127.0.0.0/8" autocomplete="off">
+              <div id="cidr-copy-container" class="copy-container">
+                <button class="btn btn-mini" id="cidr-copy"><i class="icon-ok"></i> copy</button>
+              </div>
+            </div>
+            <div class="span2">
+                <label for="iprange">
+                  IP address range
+                </label>
+                <input id="iprange" type="text" readonly>
+                <div id="iprange-copy-container" class="copy-container">
+                  <button class="btn btn-mini" id="ipfrom-copy"><i class="icon-ok"></i> copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <div>
+        <a href="https://github.com/mynetx/cidr-converter">
+            <img style="position: absolute; top: 40px; right: 0; border: 0;" 
+                src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" 
+                alt="Fork me on GitHub">
+        </a>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
-</body>
+    <script src="assets/js/bootstrap.js">
+    </script>
+    <script src="cidr.js">
+    </script>
+    <script src="assets/js/ZeroClipboard.js">
+    </script>
+    <script src="assets/js/cidr.js">
+    </script>
+  </body>
+
 </html>
