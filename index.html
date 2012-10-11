@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usage example for cidr-converter</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="J.M. (me@mynetx.net)" />
+</head>
+
+<body>
+    <p>Please see your browser’s console for the output of the script.
+        Check the source code of this page to see how cidr-converter is used.
+    </p>
+
+    <script src="cidr.js"></script>
+    <script type="text/javascript">
+        console.info("Setting the CIDR value.");
+        var cidr = new Cidr;
+        cidr.setCidr("209.85.148.138/17");
+        console.log("The CIDR is " + cidr.getCidr());
+        console.log("The subnet mask is " + cidr.getSubnetmask());
+        console.log("The IP range is " + cidr.getIpFrom() + " to " + cidr.getIpTo());
+
+        console.info("Setting the IP and subnet.");
+        cidr = new Cidr;
+        cidr.setIp("209.85.148.138");
+        cidr.setSubnetmask("255.255.128.0");
+        console.log("The CIDR is " + cidr.getCidr());
+        console.log("The subnet mask is " + cidr.getSubnetmask());
+        console.log("The IP range is " + cidr.getIpFrom() + " to " + cidr.getIpTo());
+    </script>
+</body>
+</html>
