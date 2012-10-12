@@ -22,6 +22,9 @@
       div.copy-container {
         position: relative;
       }
+      footer {
+        color: #999;
+      }
     </style>
   </head>
   
@@ -34,6 +37,13 @@
           </a>
         </div>
       </div>
+    </div>
+    <div>
+      <a href="https://github.com/mynetx/cidr-converter">
+          <img style="position: absolute; margin-top: -19px; right: 0; border: 0;" 
+              src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" 
+              alt="Fork me on GitHub">
+      </a>
     </div>
     <div class="container">
       <div class="hero-unit">
@@ -57,7 +67,7 @@
               The other fields will populate automatically.
             </p>
           </div>
-          <div class="row">
+          <div class="row-fluid">
             <div class="span3">
               <label for="ip">
                 IP address
@@ -85,27 +95,44 @@
                 <button class="btn btn-mini" id="cidr-copy"><i class="icon-ok"></i> copy</button>
               </div>
             </div>
-            <div class="span2">
-                <label for="iprange">
-                  IP address range
-                </label>
-                <input id="iprange" type="text" placeholder="127.0.0.0-127.255.255.255" readonly>
-                <div id="iprange-copy-container" class="copy-container">
-                  <button class="btn btn-mini" id="ipfrom-copy"><i class="icon-ok"></i> copy</button>
-                </div>
+            <div class="span3">
+              <label for="iprange">
+                IP address range
+              </label>
+              <input id="iprange" type="text" placeholder="127.0.0.0-127.255.255.255" readonly>
+              <div id="iprange-copy-container" class="copy-container">
+                <button class="btn btn-mini" id="ipfrom-copy"><i class="icon-ok"></i> copy</button>
               </div>
             </div>
           </div>
         </div>
       </form>
-      <hr>
-      <div>
-        <a href="https://github.com/mynetx/cidr-converter">
-            <img style="position: absolute; top: 40px; right: 0; border: 0;" 
-                src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" 
-                alt="Fork me on GitHub">
-        </a>
+      <div class="well">
+        <div>
+          <h4>
+            How do we do this?
+          </h4>
+          <p>The conversion is done with JavaScript. <br />
+            We published 
+            <a href="https://github.com/mynetx/cidr-converter">cidr-converter at Github</a>, 
+            licensed under GPL. This means you can use it for free in your own open-source projects.</p>
+        </div>
       </div>
+      <hr>
+      <footer>
+        <div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <iframe width="85" height="20" src="http://ghbtns.com/github-btn.html?user=mynetx&amp;repo=cidr-converter&amp;type=watch&amp;count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+          <iframe width="85" height="20" src="http://ghbtns.com/github-btn.html?user=mynetx&amp;repo=cidr-converter&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" allowtransparency="true"></iframe>
+        </div>
+        <p>
+          <small>
+            Made with JavaScript, binary insights and <a href="http://getbootstrap.com/">Twitter Bootstrap</a>.<br />
+            A <a href="http://www.jublo.net">JubloWebSolutions</a> project hosted on Github Pages.
+          </small>
+        </p>
+      </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
