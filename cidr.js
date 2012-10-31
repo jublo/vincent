@@ -1,7 +1,7 @@
 /*
 cidr-converter
-Copyright (C) 2012 J.M. <me@mynetx.net>
-https://github.com/mynetx/cidr-converter
+Copyright (C) 2012 JubloWebSolutions <support@jublo.net>
+https://github.com/jublonet/cidr-converter
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
