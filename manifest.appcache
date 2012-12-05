@@ -1,0 +1,31 @@
+CACHE MANIFEST
+
+#version 1.0 2012-12-05
+
+CACHE:
+
+#images
+https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png
+
+#internal HTML documents
+http://jublo.net/vincent/
+
+#style sheets
+http://jublo.net/vincent/assets/css/bootstrap-responsive.css
+http://jublo.net/vincent/assets/css/bootstrap.css
+http://jublo.net/vincent/assets/css/fonts.css
+
+#style sheet images
+http://jublo.net/vincent/assets/img/glyphicons-halflings-white.png
+http://jublo.net/vincent/assets/img/glyphicons-halflings.png
+
+#javascript files
+https://platform.twitter.com/widgets.js
+https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
+http://jublo.net/vincent/assets/js/bootstrap.js
+http://jublo.net/vincent/vincent.js
+http://jublo.net/vincent/assets/js/ZeroClipboard.js
+http://jublo.net/vincent/assets/swf/ZeroClipboard.swf
+http://jublo.net/vincent/assets/js/vincent.js
+
+NETWORK: *
