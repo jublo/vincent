@@ -1,6 +1,6 @@
 /*
 vincent
-Copyright (C) 2012 JubloWebSolutions <support@jublo.net>
+Copyright (C) 2012-2014 Jublo IT Solutions <support@jublo.net>
 https://github.com/jublonet/vincent
 
 This program is free software: you can redistribute it and/or modify
